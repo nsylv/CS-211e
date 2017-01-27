@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.7">
+<file name="lectures/lecture1/src/main/java/Main.java">
+</file>
+<file name="lectures/lecture1/src/main/java/MyClass.java">
+</file>
+<file name="lectures/lecture1/src/main/java/MyInf.java">
+</file>
+</checkstyle>

@@ -3,17 +3,24 @@
         "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
         "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
 <module name="Checker">
-  <property name="fileExtensions" value="java"/>
+    <!-- <property name="fileExtensions" value="java"/> -->
+    <property name="fileExtensions" value="java, xml, properties"/>
+    <!-- Remove unnecessarily long prefix to directory -->
+    <property name="basedir" value="/Users/nicoleschmidt/Documents/ccsf/cs211e" />
 
-  <!-- Use spaces instead of tabs -->
+    <!-- Use spaces instead of tabs -->
     <module name="FileTabCharacter"/>
 
   <module name="TreeWalker">
-    <!-- Check for unused imports -->
-    <module name="UnusedImports" />
-    <!-- Checks for Line Length Violations. -->
-    <module name="LineLength">
-        <property name="max" value="66"/>
-    </module>
+      <module name="LeftCurly">
+          <property name="option" value="nl"/>
+          <property name="tokens" value="METHOD_DEF, CLASS_DEF,INTERFACE_DEF"/>
+      </module>
+        <!-- Check for unused imports -->
+        <module name="UnusedImports" />
+        <!-- Checks for Line Length Violations. -->
+        <module name="LineLength">
+            <property name="max" value="66"/>
+        </module>
   </module>
 </module>

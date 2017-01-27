@@ -1,5 +1,26 @@
-apply plugin: 'checkstyle'
+//apply plugin: 'application'
+apply plugin: 'java'
 
-checkstyle {
-	configFile = new File(rootDir, "checkstyle.xml")
+// ==================== //
+// ==== Checkstyle ==== //
+// ==================== //
+allprojects {
+    apply plugin: 'checkstyle'
+	checkstyle {
+		configFile = new File(rootDir, "checkstyle.xml")
+		toolVersion = '6.7'
+	}
+}
+
+// mainClassName = 'Main'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	testCompile "junit:junit:4.12"
 }
